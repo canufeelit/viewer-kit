@@ -8789,7 +8789,7 @@ this["amp"]["templates"]["mobileNormalView"] = Handlebars.template({"1":function
         if (self.settings.isMobile) {
             return true;
         }
-        return global.innerWidth <= 768;
+        return global.innerWidth <= 767;
     };
 
     Viewer.prototype.renderInitialView = function () {
