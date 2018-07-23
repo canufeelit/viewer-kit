@@ -1289,7 +1289,7 @@ var jsonp =  amp.jsonp = function(url, name, success, error, transform, timeout)
         amp.jsonReturn(name,{ status:'error',code: 404, message: "Not Found", name: name });
     }, timeout);
 
-    var src = url + "?" + transform + buildQueryString({deep:true, timestamp: movingCacheWindow(), arg: "'"+name+"'", func:"amp.jsonReturn"});
+    var src = url + transform + buildQueryString({deep:true, timestamp: movingCacheWindow(), arg: "'"+name+"'", func:"amp.jsonReturn"});
     var script = amp.get.createScript(src, function(e) {
         amp.jsonReturn(name,{ status:'error',code: 404, message: "Not Found", name: name });
     });
